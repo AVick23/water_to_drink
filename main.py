@@ -3,9 +3,12 @@ import random
 from datetime import datetime, time, timedelta, timezone
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import Application, CommandHandler, ContextTypes, CallbackQueryHandler
+from dotenv import load_dotenv
+import os
 
 
-BOT_TOKEN = '8307562412:AAFY_Erj1pTw1vkomeE-s4MPOAdX5QcHz2A'
+load_dotenv('bot_token.env')  # явно указываем файл
+BOT_TOKEN = os.getenv('BOT_TOKEN')
 
 
 AVERAGE_GLASSES_PER_DAY = 10
